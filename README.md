@@ -4,4 +4,4 @@
 - Responsive Site
 - Click on articles to read them
 - view more displays older posts
-- Responsive navigation: hamburger menu on smaller screens
+- Display other recent posts after clicking "View more"
