@@ -1,0 +1,185 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto;
+    margin: 0;
+    width: 100vw;
+    height: 100vh; /*E*/
+}
+/*HEADER Layout/Typography*/
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 1.5em 1em 1em;
+}
+.header-logo,nav{
+    display: flex;
+    align-items: center;
+}
+.header-logo{
+    font-size:0.875rem ;
+    font-weight: 700;
+    line-height: 0.91625rem;
+    letter-spacing: -0.03em;
+    text-align: left;
+    column-gap: 0.4em;
+}
+nav {
+    column-gap: 2em;
+    font-size: 0.75rem;
+    font-family: "Source Sans 3";
+    font-weight: 600;
+    line-height: 0.9425rem;
+}
+a:link,a:visited,a:hover,a:active{
+    text-decoration: none;
+    color:#090909;
+    cursor: pointer;
+}
+/*Main Section*/
+main {
+    /*Mobile first design in mind
+    have empty cols to act as padding/margin for main*/
+    display: grid;
+    padding: 0;
+    grid-template-columns: 1.25em  1fr 1.25em;
+    grid-template-areas:"most-recent-post most-recent-post most-recent-post";
+    row-gap: 2.5625em;
+}
+/*Post Layout*/
+.most-recent-post{
+    grid-area: most-recent-post;
+    width: 100%;
+    background-size: cover;
+    background-image: url(/images/article-image-hero.png);
+    color: #FFFFFF;
+    padding: 5.4375em 1.25em 1.5625em;
+}
+
+.most-recent-post,.post,footer,#view-more-btn{
+    font-family: "Source Sans 3";
+}
+.post{
+    /* Makes it so posts automatically go in column 2 since columns 1 and 3 serve as padding*/
+    grid-column: 2; 
+}
+.post-img{
+    width: 100%;
+}
+.date-recent,.regular-post-date{
+    font-weight: 400;
+}
+.date-recent {
+    font-size: 0.75em;
+    line-height: 0.91625rem;
+    text-align: left;
+}
+.regular-post-date{
+    display: inline-block;
+    font-size: 0.885625rem;
+    line-height: 1.11375rem;
+    color:#000000;
+    margin-top: 1em;
+    
+}
+.recent-article-title, .regular-post-title{
+    font-weight: 700;
+}
+.recent-article-title{
+    font-size: 2rem;
+    line-height: 2.16375rem;
+    letter-spacing: -0.03rem;
+    margin: 0.25em 0;
+}
+.regular-post-title{
+    display: block;
+    font-size:1.5rem;
+    color: #141414;
+    margin: 0.375em 0;
+}
+.post-description{
+    margin: 0;
+    text-wrap: wrap;
+}
+/*Button Styling*/
+#view-more-btn{
+    font-weight: 700;
+    width: 100%;
+    background:none;
+    border: none;
+    font-size: 1rem;
+    margin-bottom:2.6875em;
+    text-decoration: underline;
+    line-height: 1.256875rem;
+}
+footer {
+    width: 100%;
+    height: 105px;
+    background: #202020;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 3px;
+}
+.footer-header,.footer-copyright{
+    font-size: 0.75rem;
+    margin: 0;
+}
+
+.footer-header{
+    line-height: 0.8125rem;
+    letter-spacing: -0.03em;
+    color: #ECECEC;
+    font-weight: 700;
+}
+.footer-copyright{
+   color: #D7D7D7;
+    line-height: 0.9375rem;
+    font-weight: 400;
+}
+#view-more-btn{
+    margin-top: 1.6875em;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.256875rem;
+}
+#view-more-btn:hover{
+    cursor: pointer;
+}
+
+
+
+/*Media Queries for Desktop Layout*/
+@media (min-width: 768px) {
+
+    .header-logo{
+        padding-left:0.5em ;
+    }
+    main{
+        grid-template-columns: 1.6875em repeat(3, 1fr) 1.6875em;
+        grid-template-areas:
+        "most-recent-post most-recent-post most-recent-post most-recent-post most-recent-post"
+        ;
+        column-gap: 1.625rem;
+        row-gap: 46px;
+    }
+    .most-recent-post{
+        padding: 17.9375em 0em 3.704375em 3.3125em 
+    }
+    .date-recent{
+        font-size: 1rem;
+        line-height: 1.256875rem;
+    }
+    .post-description{
+        max-width: 614.84px;
+    }
+    #view-more-btn{
+        font-size: 0.885625rem;
+        margin-top:1.9375em;
+        line-height: 1.11375rem;
+    }  
+}
