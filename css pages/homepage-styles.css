@@ -46,17 +46,16 @@ main {
     display: grid;
     padding: 0;
     grid-template-columns: 1.25em  1fr 1.25em;
-    grid-template-areas:"most-recent-post most-recent-post most-recent-post";
     row-gap: 2.5625em;
 }
 /*Post Layout*/
 .most-recent-post{
-    grid-area: most-recent-post;
+    background-size:cover;
     width: 100%;
-    background-size: cover;
     background-image: url(/images/article-image-hero.png);
     color: #FFFFFF;
-    padding: 5.4375em 1.25em 1.5625em;
+    padding: 5.4375em 1.25em  1.5625em ;
+    margin-bottom: 2.5625em;
 }
 
 .most-recent-post,.post,footer,#view-more-btn{
@@ -102,6 +101,7 @@ main {
 }
 .post-description{
     margin: 0;
+    
     text-wrap: wrap;
 }
 /*Button Styling*/
@@ -160,14 +160,14 @@ footer {
         padding-left:0.5em ;
     }
     main{
-        grid-template-columns: 1.6875em repeat(3, 1fr) 1.6875em;
-        grid-template-areas:
-        "most-recent-post most-recent-post most-recent-post most-recent-post most-recent-post"
-        ;
+        padding: 2.875em  1.6875em 0;
+        grid-template-columns: repeat(3, 1fr);
+    
         column-gap: 1.625rem;
-        row-gap: 46px;
+    
     }
     .most-recent-post{
+        width: 100%;
         padding: 17.9375em 0em 3.704375em 3.3125em 
     }
     .date-recent{
@@ -181,5 +181,16 @@ footer {
         font-size: 0.885625rem;
         margin-top:1.9375em;
         line-height: 1.11375rem;
-    }  
+    } 
+    .post {
+        grid-column:unset;
+    }
+}
+@media (min-width:1024px) {
+    .most-recent-post{
+        background-image: url(/images/desktopver.png);
+        background-position: bottom;
+        background-size: cover;
+        height: 700px;
+    }
 }

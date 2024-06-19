@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="/css pages/homepage-styles.css">
+    <link rel="stylesheet" href="/css pages/aboutmepage-styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -20,22 +21,32 @@
             <span>My learning journal</span>
         </div>
         <nav>
-            <a href="">HOME</a>
-            <a href="">ABOUT ME</a>
+            <a href="/html pages/homepage.html">HOME</a>
+            <a href="/html pages/aboutmepage.html">ABOUT ME</a>
         </nav>
     </header>
     <main>
-        <img class="pfp" src="/images/pfp.jpg">
-        <section class="about-me-text">
-            <h1>Hi there! My name is Jonathan and welcome to my learning journal.</h1>
-            <p>Hello! I'm Jonathan Scruggs, a Computing Science student at the University of Alberta with a GPA of 3.8.
-            I'm currently learning backend development and game dev.</p>
-            <h2>What I'm currently learning</h2>
-            <p></p>
-            <h2>How I got started</h2>
+        <section class="about-me">
+            <img class="pfp" src="/images/pfp.jpg">
+            <h1 id="intro">Hi there! My name is Jonathan Scruggs, and welcome to my learning journal.</h1>
+            <p class="about-me-paragraph">Over the years, I've become proficient in several programming languages and tools:</p>
+            <ul class="about-me-paragraph">
+                <li>Languages: Java, Python, C, SQL, HTML/CSS, R, JavaScript</li>
+                <li>Tools & Frameworks: Git, GitHub, MongoDB, SQLite, SPIGOT API, Bootstrap</li>
+            </ul>
+            <h1 class="about-me-subheader"> Who Am I?</h1>
+            <p class="about-me-paragraph">I'm Jonathan Scruggs, a Computing Science student at the University of Alberta. With a GPA of 3.8, I strive for high standards in both my academics and my work. I am passionate about coding, learning new technologies, and constantly pushing the boundaries of my knowledge.</p>
+            <h1 class="about-me-subheader">What I'm Currently Learning</h1>
+            <p>I'm currently diving deep into backend development and game development. These areas fascinate me because they combine problem-solving, creativity, and technical expertise. My journey has been incredibly rewarding, and I'm excited to continue expanding my skills in these fields.</p>
+            <h1 id="recent-posts">Recent posts</h1>
         </section>
-        <section></section> 
     </main>
-    
+    <footer>
+        <h4 class="footer-header">
+            My Learning Journal
+        </h4>
+        <h5 class="footer-copyright">Copyright ©2024</h5>
+    </footer>
+    <script type="module" src="/javascript/aboutMe.js"></script>
 </body>
 </html>

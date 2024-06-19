@@ -1,6 +1,39 @@
+body{
+    font-family: 'Source Sans 3',sans-serif;
+    color:#151515;
+}
+main{
+    padding-bottom: 3.5em;
+}
 .pfp{
     grid-area: "pfp";
     border-radius: 50%;
     max-height: 182px;
     max-width: 182px;
+}
+.about-me{
+    grid-column: 2;
+}
+#intro, .about-me-subheader{
+    font-weight: 700;
+}
+#intro{
+    font-size: 2.1775rem;
+    line-height: 2.355625rem;
+    letter-spacing: -0.03rem;
+    margin-top: 0.77497129735em;
+    margin-bottom:0.45924225028em; 
+}
+.about-me-subheader,#recent-posts,.about-me-paragraph{
+    font-size: 1rem;
+    line-height: 1.256875rem;
+}
+#recent-posts{
+    text-align: center;
+    color: #000000;
+}
+@media (min-width: 768px) {
+    .about-me{
+        grid-column: 1 /4;
+    }
 }
