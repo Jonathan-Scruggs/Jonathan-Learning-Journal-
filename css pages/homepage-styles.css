@@ -154,6 +154,8 @@ footer {
 
 
 /*Media Queries for Desktop Layout*/
+
+
 @media (min-width: 768px) {
 
     .header-logo{

@@ -1,0 +1,51 @@
+body {
+    font-family: 'Source Sans 3';
+}
+main{
+    padding-bottom: 3.5em;
+}
+.primary-article{
+    grid-column: 2;
+}
+.article-date{
+    display: inline-block;
+    margin-top: 2em;
+    font-size: 0.75rem;
+    
+}
+.primary-article-title{
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2.16375rem;
+    letter-spacing: -0.03rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.46875em;
+}
+
+.primary-article-img{
+    margin: 2.1875em 0;
+    width: 100%;
+}
+.subheader{
+    font-weight: 700;
+    margin: 0;
+}
+.paragraph,.subheader{
+    font-size: 1rem;
+    line-height: 1.256875rem;
+}
+#recent-posts{
+    text-align: center;
+    color: #000000;
+}
+/*Media Queries For Desktop*/
+@media (min-width: 768px) {
+    .primary-article{
+        grid-area: primary-article;
+        padding: 0 4.25em;
+    }
+    main{
+        grid-template-areas: 
+        "primary-article primary-article primary-article";
+    }
+}
