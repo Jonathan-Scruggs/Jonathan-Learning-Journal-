@@ -25,6 +25,8 @@ main{
 .primary-article-img{
     margin: 2.1875em 0;
     width: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 .subheader{
     font-weight: 700;
