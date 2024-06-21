@@ -13,3 +13,5 @@
 - window.location.pathname.includes() to determine if we are on a certain page directory.
 - Got practice with responsive design implementing a mobile first strategy.
 - Learned that window.location is a object that essentially returns information about the current location of a document/URL.
+## Live View
+- https://jonathan-scruggs.netlify.app/
